@@ -1,0 +1,95 @@
+<div class="container">
+  <form [formGroup]="form" (ngSubmit)="submitForm()">
+    <p><label>Temperature</label></p>
+    <div class="form-group input-group-lg">
+      <label for="celcius">C: </label>
+      <input id="C" type="number" step="0.01" [formControl]="celcius">
+    </div>
+
+    <div class="form-group input-group-lg">
+      <label for="fahrenheit">F: </label>
+      <input id="F" type="number" step="0.01" [formControl]="fahrenheit">
+    </div>
+
+    <div class="form-group">
+      <button class="btn btn-danger btn-block btn-lg">Convert Temperature</button>
+    </div>
+  </form>
+</div>
+
+
+<ng-container *ngIf="show">
+  <p><label>Temperature</label></p>
+  <label for="celcius">C: </label>
+  <input id="C" type="number" step="0.01" [formControl]="celcius">
+
+  <p>Value: {{ celcius.value }}</p>
+
+  <label for="fahrenheit">F: </label>
+  <input id="F" type="number" step="0.01" [formControl]="fahrenheit">
+
+  <p>Value: {{ fahrenheit.value }}</p>
+
+</ng-container>
+
+<ng-container *ngIf="false">
+  <p><label>Length</label></p>
+  <label for="kilometer">km: </label>
+  <input id="km" type="number" step="0.01" [formControl]="kilometer">
+
+  <p>Value: {{ kilometer.value }}</p>
+
+  <label for="mile">mi: </label>
+  <input id="mi" type="number" step="0.01" [formControl]="mile">
+
+  <p>Value: {{ mile.value }}</p>
+</ng-container>
+
+<ng-container *ngIf="false">
+  <p><label>Mass</label></p>
+  <label for="kilogram">kg: </label>
+  <input id="kg" type="number" step="0.01" [formControl]="kilogram">
+
+  <p>Value: {{ kilogram.value }}</p>
+
+  <label for="pound">lb: </label>
+  <input id="lb" type="number" step="0.01" [formControl]="pound">
+
+  <p>Value: {{ pound.value }}</p>
+</ng-container>
+
+<ng-container *ngIf="false">
+  <p><label>Area</label></p>
+  <label for="squareMeter">m^2: </label>
+  <input id="m^2" type="number" step="0.01" [formControl]="squareMeter">
+
+  <p>Value: {{ squareMeter.value }}</p>
+
+  <label for="squareFeet">ft^2: </label>
+  <input id="ft^2" type="number" step="0.01" [formControl]="squareFeet">
+
+  <p>Value: {{ squareFeet.value }}</p>
+
+</ng-container>
+
+<ng-container *ngIf="false">
+  <p><label>Volume</label></p>
+  <label for="litre">l: </label>
+  <input id="l" type="number" step="0.01" [formControl]="litre">
+
+  <p>Value: {{ litre.value }}</p>
+
+  <label for="gallon">gal: </label>
+  <input id="gal" type="number" step="0.01" [formControl]="gallon">
+
+  <p>Value: {{ gallon.value }}</p>
+</ng-container>
+
+<button (click)="updateName()">Convert</button>
+
+
+<!-- 
+Copyright Google LLC. All Rights Reserved.
+Use of this source code is governed by an MIT-style license that
+can be found in the LICENSE file at https://angular.io/license
+-->
